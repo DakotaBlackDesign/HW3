@@ -1,0 +1,43 @@
+function yourPatch(x, y) {
+  noFill();
+  stroke(238);
+  w = x+100
+  h = y+100
+  rect(x, y, w, h);
+  stroke(0);
+  strokeWeight(1);
+  colorMode(RGB);
+  count = 0 
+  while(count<500){ 
+    shapeColor = color(random(255),random(255));
+    fill(shapeColor)
+ 		beginShape();
+ 		x1 = random(x,w)
+  	y1 = random(y,h)
+    x2 = random(x,w)
+    y2 = random(y,h)
+    x3 = random(x,w)
+  	y3 = random(y,h)
+    x4 = random(x,w)
+    y4 = random(y,h)
+    x5 = x
+    y5 = random(y,h)
+    x6 = random(x,w)
+    y6 = y
+    
+  
+  	size = 70
+		vertex(x1,y1);
+		vertex(x2,y2);
+    vertex(x3,y3);
+		vertex(x4,y4);
+    vertex(x5,y5);
+		vertex(x6,y6);
+		endShape(); 
+  	count = count +1
+		}
+}
+
+yourPatch(0, 0);
+
+yourPatch(200, 200);
