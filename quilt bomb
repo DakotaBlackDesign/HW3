@@ -1,10 +1,13 @@
 
-function setup() {
+function draw() {
 	xpoints = []
-  createCanvas(340, 340);
-  stroke(50);
-  strokeWeight(0.5);
+  createCanvas(500, 500);
+	colorMode(HSB,255)
+	frameRate(24)
+  strokeWeight(0.01);
   noFill();
+	stroke((128 + 128 * sin(millis() / 5000)),255,(128 + 128 * sin(millis() /1000)));	
+	
   rect(1,1,width-2,height-2);
 	var i = 0;
 	var x1 = 0;
@@ -17,9 +20,9 @@ function setup() {
     x2 = i 
     y2 = height
     line(x1,y1,x2,y2);
-		append(xpoints,i);
-		
+		append(xpoints,i);	
   }
+	
 	for( i = 0; i <= width; i = i + 10){
     x1 = 0
   	y1 = width/2;
@@ -43,18 +46,6 @@ function setup() {
   }
 	num = xpoints.length
 	for(i = 0;i<num; i = i+1){
-		line(width/2,height/2,xpoints[i],0)
-		line(width/2,height/2,0,xpoints[i])
-		line(width/2,height/2,xpoints[i],height)
-		line(width/2,height/2,width,xpoints[i])
-		line(width,height/2,xpoints[i],0)
-		line(width,height/2,xpoints[i],height)
-		line(width/2,height,0,xpoints[i])
-		line(width/2,height,width,xpoints[i])
-		line(0,height/2,xpoints[i],height)
-		line(0,height/2,xpoints[i],0)
-		line(width/2,0,width,xpoints[i])
-		line(width/2,0,0,xpoints[i])
 		
 		line(width/4,height/4,xpoints[i],0)
 		line(width/4,height/4,0,xpoints[i])
