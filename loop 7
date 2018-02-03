@@ -1,0 +1,21 @@
+function setup() {
+  createCanvas(400, 400);
+  stroke(50)
+  strokeWeight(1)
+  rectMode(CENTER)
+  noFill()
+}	
+
+function draw(){
+for ( var i = 20 ; i < width; i = i + 50){
+  var x = i
+  var y = height/2
+  for( var a = 10; a < 50; a = a + 10){
+      var x1 = x
+      var y1 = y
+      var x2 = a
+      var y2 = a 
+      rect(x1,y1,x2,y2)
+  }
+ }
+}
