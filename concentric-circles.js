@@ -4,9 +4,6 @@ function setup() {
   strokeWeight(1)
   noFill()
   rect(1,1,width-2,height-2)
-}	
-
-function draw(){
 var i = 0
 var x1 = 0
 var y1 = 0
